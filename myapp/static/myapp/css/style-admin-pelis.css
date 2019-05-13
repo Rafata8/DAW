@@ -1,0 +1,67 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    min-width: 200px;
+}
+
+.centrado {
+    text-align: center;
+
+}
+
+.nueva {
+    border-radius: 40%;
+}
+
+.modif {
+    margin: 5px;
+}
+
+#mostrando {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    color: rebeccapurple;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.pelis {
+    /* border: 5px solid orange; */
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+
+.peli {
+    /* border: 5px solid orange; */
+    height: 300px;
+    width: 500px;
+    margin: 30px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    text-align: center;
+    margin: 10px;
+}
+
+.badge {
+    margin: 10px;
+}
+
+@media(max-width: 400px){
+	.pelis {
+        /* border: 5px solid orange; */
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+    }
+}

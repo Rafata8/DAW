@@ -1,0 +1,69 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href={% static "myapp/css/style_crear_pelicula.css" %} />
+{% endblock %}
+
+
+{% block buscador %}
+{% endblock %}
+
+{% block mostrando %}
+
+<div class="container">
+    <div class="fondo">
+        <form id="formularioPelicula">
+            <div class="form-group">
+                <h4 for="tituloPelicula">Título</h4>
+                <input type="text" class="form-control" id="tituloPelicula" placeholder="Título de la película">
+            </div>
+            <div class="form-group">
+                <h4 for="URLPelicula">URL de la película</h4>
+                <input type="url" class="form-control" id="URLPelicula" placeholder="URL de la película">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <h5 for="añoPelicula">Año</h5>
+                    <input type="number" class="form-control" id="añoPelicula" placeholder="Año">
+                </div>
+                <div class="form-group col-md-2">
+                    <h5 for="valoracionPelicula">Valoración</h5>
+                    <select class="form-control" id="valoracionPelicula">
+                        <option>0,5</option>
+                        <option>1,0</option>
+                        <option>1,5</option>
+                        <option>2,0</option>
+                        <option>2,5</option>
+                        <option>3,0</option>
+                        <option>3,5</option>
+                        <option>4,0</option>
+                        <option>4,5</option>
+                        <option>5,0</option>
+                        <option>5,5</option>
+                        <option>6,0</option>
+                        <option>6,5</option>
+                        <option>7,0</option>
+                        <option>7,5</option>
+                        <option>8,0</option>
+                        <option>8,5</option>
+                        <option>9,0</option>
+                        <option>9,5</option>
+                        <option>10,0</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-8">
+                    <h5 for="directorPelicula">Director</h5>
+                    <input type="text" class="form-control" id="directorPelicula" placeholder="Director de la película">
+                </div>
+            </div>
+            <div class="form-group">
+                <h4 for="descripcionPelicula">Descripión</h4>
+                <textarea class="form-control" id="descripcionPelicula" placeholder="Breve descripción de la película"
+                    style="height: 140px"></textarea>
+            </div>
+            <h4 type="submit" class="btn btn-primary" onclick="submitFormPeliculas()">Crear</h4>
+        </form>
+    </div>
+</div>
+{% endblock %}

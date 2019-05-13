@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Netflix2</title>
+
+	<!-- scripts jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+
+	<meta charset="utf-8" />
+
+	{% load static %}
+	<link rel="stylesheet" href={% static "myapp/css/style-login.css" %} />
+
+</head>
+
+<body background={% static "myapp/images/fondo2.jpg" %}>
+	<div class="grid">
+		<p> Netflix2 </p>
+		<!-- <input class="el" id="usuario" placeholder="Usuario"></input>
+		<input type="password" class="el" id="password" placeholder="Contraseña"></input>
+		<a href={% url 'pelis' %} type="button" class="btn btn-primary el">Login</a> -->
+
+
+		<form action={% url 'pelis' %} method="post">
+			{% csrf_token %}
+			<h1>Form</h1>
+			<label for="input">Input</label>
+			<input type="text" name="usuario" id="usuario">
+			<input type="text" name="contrasena" id="contrasena">
+			<input type="submit">
+
+		</form>
+	</div>
+</body>
+
+</html>

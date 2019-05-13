@@ -1,0 +1,168 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href={% static "myapp/css/style_crear_usuario.css" %} />
+{% endblock %}
+
+
+{% block buscador %}
+{% endblock %}
+
+{% block mostrando %}
+<div class="container">
+  <div class="fondo">
+    <form id="formularioUsuario">
+      <div class="form-group">
+        <h4 for="nombreInput">Nombre</h4>
+        <input type="text" class="form-control" id="nombreInput" placeholder="Introduzca su nombre">
+      </div>
+      <div class="form-group">
+        <h4 for="apellidosImput">Apellidos</h4>
+        <input type="text" class="form-control" id="apellidosInput" placeholder="Introduzca su(s) apellido(s)">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <h4 for="fechaNacimientoSelect">Fecha de nacimiento</h4>
+          <select class="form-control fechaNacimientoSelect" id="fechaNacimientoSelect">
+            <option>Día</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <select class="form-control mes">
+            <option>Mes</option>
+            <option>Enero</option>
+            <option>Febrero</option>
+            <option>Marzo</option>
+            <option>Abril</option>
+            <option>Mayo</option>
+            <option>Junio</option>
+            <option>Julio</option>
+            <option>Agosto</option>
+            <option>Septiembre</option>
+            <option>Octubre</option>
+            <option>Noviembre</option>
+            <option>Diciembre</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <select class="form-control año">
+            <option>Año</option>
+            <option>1950</option>
+            <option>1951</option>
+            <option>1952</option>
+            <option>1953</option>
+            <option>1954</option>
+            <option>1955</option>
+            <option>1956</option>
+            <option>1957</option>
+            <option>1958</option>
+            <option>1959</option>
+            <option>1960</option>
+            <option>1961</option>
+            <option>1962</option>
+            <option>1963</option>
+            <option>1964</option>
+            <option>1965</option>
+            <option>1966</option>
+            <option>1967</option>
+            <option>1968</option>
+            <option>1969</option>
+            <option>1970</option>
+            <option>1971</option>
+            <option>1972</option>
+            <option>1973</option>
+            <option>1974</option>
+            <option>1975</option>
+            <option>1976</option>
+            <option>1977</option>
+            <option>1978</option>
+            <option>1979</option>
+            <option>1980</option>
+            <option>1981</option>
+            <option>1982</option>
+            <option>1983</option>
+            <option>1984</option>
+            <option>1985</option>
+            <option>1986</option>
+            <option>1987</option>
+            <option>1988</option>
+            <option>1989</option>
+            <option>1990</option>
+            <option>1991</option>
+            <option>1992</option>
+            <option>1993</option>
+            <option>1994</option>
+            <option>1995</option>
+            <option>1996</option>
+            <option>1997</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <h4 class="tipoUsuario">Tipo de usuario</h4>
+        <select class="form-control">
+          <option>Seleccione el tipo de usuario que desea crear</option>
+          <option>Administrador</option>
+          <option>Usuario</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h4 for="emailInput">E-mail</h4>
+        <input type="email" class="form-control" id="emailInput" placeholder="Introduzca su correo electrónico">
+      </div>
+      <div class="form-group">
+        <h4 for="usuarioInput">Usuario</h4>
+        <input type="text" class="form-control" id="usuarioInput" placeholder="Introduzca su nombre de usuario">
+      </div>
+      <div class="form-group">
+        <h4 for="passwordInput">Contraseña</h4>
+        <input type="password" class="form-control" id="paswordInput"
+          placeholder="Introduzca una contraseña (min. 8 caracteres)">
+      </div>
+      <div class="form-group">
+        <h4 for="repetirPasswordInput">Repetir contraseña</h4>
+        <input type="password" class="form-control" id="repetirPasswordInput" placeholder="Repita la contraseña">
+      </div>
+      <h4 id="submitButton" type="submit" class="btn btn-primary">Registrar</h4>
+    </form>
+  </div>
+</div>
+{% endblock %}

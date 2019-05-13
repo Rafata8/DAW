@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix2</title>
+
+
+    <!-- scripts jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+
+    {% load static %}
+    {% block css %}
+    <link rel="stylesheet" href={% static "myapp/css/style-admin-pelis.css" %} />
+    <script src={% static "myapp/jquery/script-pelis.js" %}></script>
+    {% endblock %}
+</head>
+
+
+<body background={% static "myapp/images/fondo2.jpg" %}>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href={% url 'pelis' %}>Netflix2</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href={% url 'pelis' %}><span class="glyphicon glyphicon-user"></span><span
+                                id="usuario"></span> </a></li>
+                    <li><a href={% url 'login' %}><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+                    <li><a href={% url 'administrar_pelis' %}><span class="glyphicon glyphicon-cog"></span> Administrar
+                            peliculas </a></li>
+                    <li><a href={% url 'administrar_usuarios' %}><span class="glyphicon glyphicon-briefcase"></span>
+                            Administrar usuarios </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block buscador %}
+    <section class="search">
+        <input id="nombre" placeholder="Nombre de la pelicula"></input>
+        <button type="button" class="btn btn-primary" id="filtrar">Buscar</button>
+    </section>
+
+    <section class="centrado">
+        <h2 id="mostrando">Populares ahora</h2>
+    </section>
+    {% endblock %}
+
+
+    {% block mostrando %}
+    <section class="flex-container" id="listapelis">
+
+
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Modal</button> -->
+
+        <!-- Modal -->
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div id="description">
+                            descripcion y tal
+                        </div>
+                        <div id="video">
+                            <iframe id="cambiar" class="peli" width="auto" height="auto" src="patata" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </section>
+    {% endblock %}
+</body>
+
+</html>

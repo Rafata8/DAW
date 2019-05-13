@@ -1,0 +1,22 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href={% static "myapp/css/style-admin-pelis.css" %} />
+<script src={% static "myapp/jquery/script-admin-pelis.js" %}></script>
+{% endblock %}
+
+{% block mostrando %}
+<section class="flex-container" id="listapelis">
+
+	<a href={% url 'crear_pelicula' %} type="button" class="btn btn-success nueva">Añadir Pelicula</a>
+
+
+	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Modal</button> -->
+
+
+
+
+
+</section>
+{% endblock %}

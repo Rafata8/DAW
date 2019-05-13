@@ -1,0 +1,2 @@
+admin: contrasena1
+plebe: contrasena2
