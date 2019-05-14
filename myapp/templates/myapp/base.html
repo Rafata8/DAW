@@ -40,8 +40,8 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href={% url 'pelis' %}><span class="glyphicon glyphicon-user"></span><span
-                                id="usuario"></span> </a></li>
-                    <li><a href={% url 'login' %}><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+                                id="usuario"> {{ nombre_usuario }}</span> </a></li>
+                    <li><a href={% url 'my_logout' %}><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
                     <li><a href={% url 'administrar_pelis' %}><span class="glyphicon glyphicon-cog"></span> Administrar
                             peliculas </a></li>
                     <li><a href={% url 'administrar_usuarios' %}><span class="glyphicon glyphicon-briefcase"></span>

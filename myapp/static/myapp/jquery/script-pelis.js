@@ -16,11 +16,11 @@ $(document).ready(function () {
 
 
     //esto tapa las opciones de administrador si el usuario no es rafata, en este caso 
-    $("#usuario").text('Rafata');
+    // $("#usuario").text('Rafata');
 
-    if($("#usuario").text()!='Rafata'){
-        $(".admin").hide();
-    }
+    // if($("#usuario").text()!='Rafata'){
+    //     $(".admin").hide();
+    // }
 
 
 

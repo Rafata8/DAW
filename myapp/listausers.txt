@@ -1,2 +1,4 @@
+para la herramienta admin: Root: root
+
 admin: contrasena1
 plebe: contrasena2

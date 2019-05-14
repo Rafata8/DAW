@@ -28,12 +28,12 @@
 		<a href={% url 'pelis' %} type="button" class="btn btn-primary el">Login</a> -->
 
 
-		<form action={% url 'pelis' %} method="post">
-			<!-- {% csrf_token %} -->
+		<form action={% url 'my_login' %} method="post">
+			{% csrf_token %}
 			<!-- <h1>Form</h1> -->
 			<label for="input">Input</label>
-			<input type="text" name="usuario" id="usuario">
-			<input type="text" name="contrasena" id="contrasena">
+			<input type="text" name="username" id="username">
+			<input type="text" name="password" id="password">
 			<input type="submit">
 
 		</form>

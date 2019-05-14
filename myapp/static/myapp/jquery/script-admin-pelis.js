@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 
 
-    $("#usuario").text('Rafata');
+    // $("#usuario").text('Rafata');
 
 
 
